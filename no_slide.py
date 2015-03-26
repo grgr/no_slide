@@ -65,9 +65,9 @@ from mathutils import Vector, Matrix
 import math
 
 class NoSlideAddMemberOperator(bpy.types.Operator):
-    """Add Real Distance Move Member"""  
+    """Add NoSlide Member"""  
     bl_idname = "object.no_slide_add_member_operator"  
-    bl_label = "Add Real Distance Move Member"  
+    bl_label = "Add NoSlide Member"  
     bl_description = "Add NoSlide Member"
     bl_options = {'REGISTER', 'UNDO'} 
 
@@ -77,9 +77,9 @@ class NoSlideAddMemberOperator(bpy.types.Operator):
         return{'FINISHED'}
 
 class NoSlideDelMemberOperator(bpy.types.Operator):
-    """Delete Real Distance Move Member"""  
+    """Delete NoSlide Member"""  
     bl_idname = "object.no_slide_del_member_operator"  
-    bl_label = "Delete Real Distance Move Member"  
+    bl_label = "Delete NoSlide Member"  
     bl_description = "Delete NoSlide Member"
     bl_options = {'REGISTER', 'UNDO'} 
 
@@ -331,7 +331,7 @@ class NoSlide:
 class NoSlidePanel(bpy.types.Panel):
     bl_space_type = 'NLA_EDITOR'
     bl_region_type = 'UI'
-    bl_label = 'Real Distance Move'
+    bl_label = 'NoSlide'
 
     def draw(self, context):
         rig = bpy.context.active_object 
@@ -407,9 +407,9 @@ class NoSlidePanel(bpy.types.Panel):
             row.operator("object.no_slide_operator")
 
 class NoSlideOperator(bpy.types.Operator):
-    """Real Distance Move Operator"""  
+    """NoSlide Operator"""  
     bl_idname = "object.no_slide_operator"  
-    bl_label = "Real Distance Move Operator"  
+    bl_label = "Calculate Distance and Rotation"  
     bl_options = {'REGISTER', 'UNDO'} 
 
     @classmethod
