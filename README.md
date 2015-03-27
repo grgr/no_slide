@@ -40,22 +40,30 @@ e.g. jump.
 
 ## Usage
 
-I will explain usage with a **walk** action as **example**.
+I will explain usage with a **walk** action as **example**.  
+Suppose you have a rigged character with a walk action and an NLA-strip of this action.
 
-* suppose you have a rigged character with a walk action and an NLA-strip with this action.
-
+#### Preparation:
 + create a vertex-group on each foot (this will be used to calculate the distance to the characters center while walking).
 + select the walk NLA-strip in NLA-editor
 + select the rig in 3D-View
-+ hit T in the NLA-editor to open settings
++ hit `N` in the NLA-editor to open settings
 + at the bottom you will see NoSlide
 
-In NoSlide:
-+ enter the rig-child (the character mesh).
-+ enter the NLA-strip name
+#### In NoSlide:
++ enter rig-child (the character mesh/ the rigged mesh).
++ enter the NLA-strip name (here: walk)
 + choose a frame step (smaller will be more precise but more heavy to calculate)
 + add a member for each foot and name it e.g. 'left foot' and 'right foot' 
-+ for each member add the corresponding vertex-group
+... (hit the `+` for as many feet or whatever your character has)
+... only for the extremities which stay on the ground some time
++ for each member add the corresponding vertex-group 
+... for left  foot this would be a vertex-group with at least one vertex on the left foot
+
++ insert the Rest Frames:
+..+ **first rest frame** for the left foot is the first frame on which the left foot rests on the ground and only the rest of the character is moving in space
+..+ **last rest frame** for the left foot is the last frame on which the left foot rests on the ground and only the rest of the character is moving in space
 + give some rotation values if you like to
-+ insert the Rest Frames
-+ hit calculate distances
+... The character will rotate with the corresponding foot on the ground.
+... So no need for an extra 'turn right' action - but an extra strip eventually. 
++ hit 'calculate distances' and have fun!
