@@ -51,19 +51,26 @@ Suppose you have a rigged character with a walk action and an NLA-strip of this 
 + at the bottom you will see NoSlide
 
 #### In NoSlide:
-+ enter rig-child (the character mesh/ the rigged mesh).
-+ enter the NLA-strip name (here: walk)
-+ choose a frame step (smaller will be more precise but more heavy to calculate)
-+ add a member for each foot and name it e.g. 'left foot' and 'right foot' 
-... (hit the `+` for as many feet or whatever your character has)
-... only for the extremities which stay on the ground some time
-+ for each member add the corresponding vertex-group 
-... for left  foot this would be a vertex-group with at least one vertex on the left foot
+1. enter rig-child (the character mesh/ the rigged mesh).  
 
-+ insert the Rest Frames:
-..+ **first rest frame** for the left foot is the first frame on which the left foot rests on the ground and only the rest of the character is moving in space
-..+ **last rest frame** for the left foot is the last frame on which the left foot rests on the ground and only the rest of the character is moving in space
-+ give some rotation values if you like to
-... The character will rotate with the corresponding foot on the ground.
-... So no need for an extra 'turn right' action - but an extra strip eventually. 
-+ hit 'calculate distances' and have fun!
+2. enter the NLA-strip name (here: walk)  
+
+3. choose a frame step (smaller will be more precise but more heavy to calculate)   
+
+4. add a member for each foot and name it e.g. 'left foot' and 'right foot'  
+  *hit the `+` for as many feet or whatever your character has* 
+  *only for the extremities which stay on the ground some time*     
+
+5. for each member add the corresponding vertex-group   
+  for left  foot this would be a vertex-group with at least one vertex on the left foot
+
+6. insert the Rest Frames:  
+  * **first rest frame** for the left foot is the first frame on which the left foot rests on the ground and only the rest of the character is moving in space
+  * **last rest frame** for the left foot is the last frame on which the left foot rests on the ground and only the rest of the character is moving in space  
+  
+7. give some rotation values if you like to
+  The character will rotate with the corresponding foot on the ground.
+  So no need for an extra 'turn right' action - but an extra strip eventually.   
+
+8. hit 'calculate distances' and have fun!  
+
